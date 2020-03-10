@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Senai.Senatur.WebApi.Controller
+namespace Senai.Senatur.WebApi.ViewModels
 {
-    public class UsuariosController
+    public class LoginViewModel
     {
     }
 }
