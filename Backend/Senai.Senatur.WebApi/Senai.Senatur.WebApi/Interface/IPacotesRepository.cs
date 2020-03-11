@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Senai.Senatur.WebApi.Interface { 
-    // julia fez esse
+    
     interface IPacotesRepository
     {
     // primeiro tem que colocar o retorno

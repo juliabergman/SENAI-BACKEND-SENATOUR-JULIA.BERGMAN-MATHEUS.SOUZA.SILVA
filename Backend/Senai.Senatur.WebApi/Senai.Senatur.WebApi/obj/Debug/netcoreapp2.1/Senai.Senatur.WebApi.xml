@@ -4,5 +4,45 @@
         <name>Senai.Senatur.WebApi</name>
     </assembly>
     <members>
+        <member name="M:Senai.Senatur.WebApi.Controllers.LoginController.Post(Senai.Senatur.WebApi.ViewModels.LoginViewModel)">
+            <summary>
+            validando o login
+            </summary>
+            <param name="login">Obejeto login que contém o email e a senha do usuário</param>
+            <returns>retorna um token com as informações do usuário</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.Get">
+            <summary>
+            gerando uma lista
+            </summary>
+            <returns>retorna a lista de pacotes</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.GetPorId(System.Int32)">
+            <summary>
+            buscando um pacote pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>retorna o pacote </returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.Post(Senai.Senatur.WebApi.Domains.Pacotes)">
+             <summary>
+            cadastrando um pacote
+             </summary>
+             <param name="pacoteNovo"></param>
+             <returns>retorna o statuscode 201</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.Put(Senai.Senatur.WebApi.Domains.Pacotes)">
+            <summary>
+            atualizando um pacote
+            </summary>
+            <param name="pacotesAtualizado"></param>
+            <returns>retorna com "return Ok"</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuariosController.Get">
+            <summary>
+            LISTANDO OS USUARIOS
+            </summary>
+            <returns>retorna a lista de usuarios</returns>
+        </member>
     </members>
 </doc>

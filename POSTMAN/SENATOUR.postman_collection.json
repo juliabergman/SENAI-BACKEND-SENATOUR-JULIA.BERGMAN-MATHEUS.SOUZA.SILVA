@@ -14,7 +14,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:5000/api/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios"
+							]
 						}
 					},
 					"response": []
@@ -30,8 +39,26 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"nomePacote\": \"Bahia - 5 DIAS/ 4 DIÁRIAS\",\n    \"descricao\": \"O que não falta em Salvador são\\r\\n\\t\\tatrações. Prova disso são as praias, os museus e as construções seculares que dão um charme mais que\\r\\n\\t\\tespecial à região. A cidade, sinônimo de alegria, também é conhecida pela efervescência cultural que a\\r\\n\\t\\tcredenciou como um dos destinos mais procurados por turistas brasileiros e estrangeiros. O Pelourinho e\\r\\n\\t\\to Elevador são alguns dos principais pontos de visitação.\",\n    \"dataIda\": \"2020-08-06T00:00:00\",\n    \"dataVolta\": \"2020-08-10T00:00:00\",\n    \"valor\": 854.00,\n    \"ativo\": true,\n    \"nomeCidade\": \"Bahia\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:5000/api/Pacotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes"
+							]
 						}
 					},
 					"response": []
@@ -42,7 +69,17 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:5000/api/Pacotes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes",
+								"1"
+							]
 						}
 					},
 					"response": []
@@ -52,8 +89,26 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t     \"idPacote\": 1,\n        \"nomePacote\": \"Savaldor - 5 DIAS/ 4 DIÁRIAS\",\n        \"descricao\": \"O que não falta em Salvador são\\r\\n\\t\\tatrações. Prova disso são as praias, os museus e as construções seculares que dão um charme mais que\\r\\n\\t\\tespecial à região. A cidade, sinônimo de alegria, também é conhecida pela efervescência cultural que a\\r\\n\\t\\tcredenciou como um dos destinos mais procurados por turistas brasileiros e estrangeiros. O Pelourinho e\\r\\n\\t\\to Elevador são alguns dos principais pontos de visitação.\",\n        \"dataIda\": \"2020-08-06T00:00:00\",\n        \"dataVolta\": \"2020-08-10T00:00:00\",\n        \"valor\": 854.00,\n        \"ativo\": true,\n        \"nomeCidade\": \"Salvador que não sanva :(\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:5000/api/Pacotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes"
+							]
 						}
 					},
 					"response": []
@@ -64,7 +119,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:5000/api/Pacotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes"
+							]
 						}
 					},
 					"response": []
@@ -78,10 +142,28 @@
 				{
 					"name": "BUSCAR E GERAR TOKEN",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"email\": \"admin@admin.com\",\n        \"senha\": \"admin\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:5000/api/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Login"
+							]
 						}
 					},
 					"response": []
