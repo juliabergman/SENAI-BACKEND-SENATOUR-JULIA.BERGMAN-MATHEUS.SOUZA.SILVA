@@ -38,6 +38,24 @@
             <param name="pacotesAtualizado"></param>
             <returns>retorna com "return Ok"</returns>
         </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.GetPorAtivo">
+            <summary>
+            fazendo o extra, listando só por ativo
+            </summary>
+            <returns>retorna a lista de ativos</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.GetPorInativo">
+            <summary>
+            fazendo o extra, listando só por inaativo
+            </summary>
+            <returns>retorna a lista de inativos</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.GetPorCidade(System.String)">
+            <summary>
+            fazendo o extra, listando só cidade
+            </summary>
+            <returns>retorna a lista de pacotes da cidade buscada</returns>
+        </member>
         <member name="M:Senai.Senatur.WebApi.Controllers.UsuariosController.Get">
             <summary>
             LISTANDO OS USUARIOS

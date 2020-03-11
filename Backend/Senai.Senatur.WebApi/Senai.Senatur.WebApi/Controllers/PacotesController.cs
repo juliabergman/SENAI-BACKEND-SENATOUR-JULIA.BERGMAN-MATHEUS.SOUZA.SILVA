@@ -12,7 +12,7 @@ using Senai.Senatur.WebApi.Repositories;
 namespace Senai.Senatur.WebApi.Controllers
 {
 
-   
+
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
@@ -24,7 +24,7 @@ namespace Senai.Senatur.WebApi.Controllers
         {
             _pacotesRepository = new PacotesRepository();
         }
-        
+
         /// <summary>
         /// gerando uma lista
         /// </summary>
@@ -59,7 +59,7 @@ namespace Senai.Senatur.WebApi.Controllers
         /// <param name="pacoteNovo"></param>
         /// <returns>retorna o statuscode 201</returns>
         //só o adm pode cadastrar
-        [Authorize(Roles ="1")]
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Pacotes pacoteNovo)
         {
@@ -84,5 +84,42 @@ namespace Senai.Senatur.WebApi.Controllers
 
             return Ok("Pacote Atualizado.");
         }
+
+        /// <summary>
+        /// fazendo o extra, listando só por ativo
+        /// </summary>
+        /// <returns>retorna a lista de ativos</returns>
+        [HttpGet("Ativo")]
+        public IEnumerable<Pacotes>GetPorAtivo()
+        {
+            return _pacotesRepository.ListarPorAtivo();
+        }
+
+        /// <summary>
+        /// fazendo o extra, listando só por inaativo
+        /// </summary>
+        /// <returns>retorna a lista de inativos</returns>
+
+        [HttpGet("Inativo")]
+        public IEnumerable<Pacotes> GetPorInativo()
+        {
+            return _pacotesRepository.ListarPorInativo();
+        }
+
+        /// <summary>
+        /// fazendo o extra, listando só cidade
+        /// </summary>
+        /// <returns>retorna a lista de pacotes da cidade buscada</returns>
+
+        [HttpGet("{Cidade}")]
+        public IEnumerable<Pacotes> GetPorCidade(string Cidade)
+        {
+            return _pacotesRepository.ListarPorCidade(Cidade);
+        }
+
+
+
+
+
     }
 }
