@@ -23,6 +23,33 @@ namespace Senai.Senatur.WebApi.Controllers
             _pacotesRepository = new PacotesRepository();
         }
 
+        [HttpGet]
+        public IEnumerable<Pacotes> Get()
+        {
+            return _pacotesRepository.Listar();
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetPorId(int id)
+        {
+            Pacotes pacoteBuscado = _pacotesRepository.Buscar(id);
+
+            if (pacoteBuscado == null)
+            {
+                return NotFound("Pacote não encontrado.");
+            }
+
+            return Ok(pacoteBuscado);
+        }
+
+        [HttpPost]
+        public IActionResult Post(Pacotes pacoteNovo)
+        {
+            _pacotesRepository.Cadastro(pacoteNovo);
+
+            return StatusCode(201);
+        }
+
         [HttpPut]
         public IActionResult Put(Pacotes pacotesAtualizado)
         {

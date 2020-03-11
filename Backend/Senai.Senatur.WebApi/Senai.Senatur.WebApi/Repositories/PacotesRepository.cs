@@ -45,17 +45,18 @@ namespace Senai.Senatur.WebApi.Repositories
 
         public Pacotes Buscar(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Pacotes.FirstOrDefault(p => p.IdPacote == id);
         }
 
-        public void Cadastro(Pacotes pacotes)
+        public void Cadastro(Pacotes pacotesNovo)
         {
-            throw new NotImplementedException();
+            ctx.Pacotes.Add(pacotesNovo);
+            ctx.SaveChanges();
         }
 
         public List<Pacotes> Listar()
         {
-            throw new NotImplementedException();
+            return ctx.Pacotes.ToList();
         }
     }
 }
