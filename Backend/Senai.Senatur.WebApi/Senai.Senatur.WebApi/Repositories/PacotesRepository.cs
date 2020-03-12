@@ -29,11 +29,15 @@ namespace Senai.Senatur.WebApi.Repositories
                                     // esse valor
             pacotes.NomePacote = pacotesAtualizado.NomePacote;
             // vem pra cá
+
+            //IMPORTANTE NAO ESQUECER DE COLOCAR ISSO
+            // TEM QUE CHMAR TODOS OS ATRIBUTOS !!!!!!!!!!!
         
-            pacotes.Descricao = pacotesAtualizado.Descricao;
+            pacotes.Descricao = pacotesAtualizado.Descricao;  // OS ATRIBUTOS 
             pacotes.DataIda = pacotesAtualizado.DataIda;
             pacotes.DataVolta = pacotesAtualizado.DataVolta;
             pacotes.Ativo = pacotesAtualizado.Ativo;
+            pacotes.Valor = pacotesAtualizado.Valor;
             pacotes.NomeCidade = pacotesAtualizado.NomeCidade;
 
             // aqui diz que o nome que a gente passou no nome da requisição vai ir pro pacotes
@@ -57,6 +61,21 @@ namespace Senai.Senatur.WebApi.Repositories
         public List<Pacotes> Listar()
         {
             return ctx.Pacotes.ToList();
+        }
+
+        // EXTRA Listar os Pacotes com ordenação por preço. Ou seja, do mais barato para o mais caro e vice-versa. 
+        // agora o barato
+        public List<Pacotes> ListarBarato()
+        {
+            return ctx.Pacotes.OrderBy(p => p.Valor).ToList();
+        }
+
+        // EXTRA Listar os Pacotes com ordeew
+        // primeiro a ordem caro
+        public List<Pacotes> ListarCaro()
+        {
+            return ctx.Pacotes.OrderByDescending(p => p.Valor).ToList();
+            // sempre colocar o ToList acompanhado a outras listas
         }
 
 

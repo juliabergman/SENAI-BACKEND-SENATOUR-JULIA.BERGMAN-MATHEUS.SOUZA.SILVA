@@ -195,6 +195,48 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "LISTAR POR PREÇO (MAIS CARO)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Pacotes/Caro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes",
+								"Caro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR PRO PREÇO (BARATO)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Pacotes/Barato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes",
+								"Barato"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}

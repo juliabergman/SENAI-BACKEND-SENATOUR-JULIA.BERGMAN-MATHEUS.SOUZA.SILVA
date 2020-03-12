@@ -117,6 +117,29 @@ namespace Senai.Senatur.WebApi.Controllers
             return _pacotesRepository.ListarPorCidade(Cidade);
         }
 
+        // EXTRA Listar os Pacotes com ordeew
+        // primeiro a ordem caro
+        /// <summary>
+        /// Listando pela ordem de preço mais caro
+        /// </summary>
+        /// <returns>retorna os preços mais caros</returns>
+
+        [HttpGet("Caro")]
+        public IEnumerable<Pacotes> GetPorCaro()
+        {
+            return _pacotesRepository.ListarCaro();
+        }
+
+
+        // EXTRA Listar os Pacotes com ordenação por preço. Ou seja, do mais barato para o mais caro e vice-versa. 
+        // agora o barato
+
+
+        [HttpGet("Barato")]
+        public IEnumerable<Pacotes> GetPorBarato()
+        {
+            return _pacotesRepository.ListarBarato();
+        }
 
 
 

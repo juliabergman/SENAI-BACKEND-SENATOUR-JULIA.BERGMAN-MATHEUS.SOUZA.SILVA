@@ -32,7 +32,13 @@ namespace Senai.Senatur.WebApi.Interface {
         // extra, listando por cidades
         List<Pacotes> ListarPorCidade(string Cidade);
 
+        // EXTRA Listar os Pacotes com ordenação por preço. Ou seja, do mais barato para o mais caro e vice-versa. 
 
+        // primeiro a ordem caro
+        List<Pacotes> ListarCaro();
+
+        // agora o barato
+        List<Pacotes> ListarBarato();
 
     }
 }

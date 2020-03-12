@@ -56,6 +56,12 @@
             </summary>
             <returns>retorna a lista de pacotes da cidade buscada</returns>
         </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.GetPorCaro">
+            <summary>
+            Listando pela ordem de preço mais caro
+            </summary>
+            <returns>retorna os preços mais caros</returns>
+        </member>
         <member name="M:Senai.Senatur.WebApi.Controllers.UsuariosController.Get">
             <summary>
             LISTANDO OS USUARIOS
